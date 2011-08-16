@@ -1,0 +1,18 @@
+<% if signed_in? %>
+	<table class="front" summary="For signed-in users">
+		<tr>
+			<td class="main">
+				<h1 class="micropost">What's on your mind?</h1>
+				<%= render 'shared/micropost_form' %>
+				<h2>Status Stream</h2>
+				<%= render 'shared/user_info' %>
+				<%= render 'shared/feed' %>
+			</td>
+		</tr>
+	</table>
+<% else %>
+<h1>Social Network</h1>
+<p>
+Front Page...
+</p>
+<% end %>

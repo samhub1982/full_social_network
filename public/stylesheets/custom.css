@@ -271,6 +271,7 @@ div.user_info a {
 
 div.user_info span.user_name {
 	position: absolute;
+	vertical-align: top;
 }
 
 div.user_info span.microposts {
@@ -282,6 +283,6 @@ form.new_micropost {
 }
 
 form.new_micropost textarea {
-	height: 4em;
+	height: 3em;
 	margin-bottom: 0;
 }
