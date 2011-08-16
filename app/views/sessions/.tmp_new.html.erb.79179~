@@ -13,5 +13,5 @@
 	</div>
 <% end %>
 <p>
-	New user? <%= link_to "Click here to register", access_path %>
+	New user? <%= link_to "Click here to register", signup_path %>
 </p>

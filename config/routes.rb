@@ -1,5 +1,7 @@
 FullSocialNetwork::Application.routes.draw do
   
+  resources :codes
+
   resources :users do
     member do
       get :following, :followers
@@ -19,6 +21,8 @@ FullSocialNetwork::Application.routes.draw do
   match '/signup',  :to => 'users#new'
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
+  match '/access',  :to => 'codes#new'
+  match '/admin',   :to => 'pages#admin'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

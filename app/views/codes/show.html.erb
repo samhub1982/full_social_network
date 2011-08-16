@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Encrypted code:</b>
+  <%= @code.encrypted_code %>
+</p>
+
+<p>
+  <b>Salt:</b>
+  <%= @code.salt %>
+</p>
+
+
+<%= link_to 'Edit', edit_code_path(@code) %> |
+<%= link_to 'Back', codes_path %>

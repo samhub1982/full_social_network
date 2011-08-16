@@ -3,6 +3,9 @@ class Micropost < ActiveRecord::Base
   
   belongs_to :user
   
+  MAX_CHARS = 280
+  validates_length_of   :content, :maximum => MAX_CHARS
+  
   validates :content, :presence => true, :length => { :maximum => 280 }
   validates :user_id, :presence => true
   

@@ -55,6 +55,7 @@ class User < ActiveRecord::Base
       user = find_by_id(id)
       (user && user.salt == cookie_salt) ? user : nil
     end
+    
   end
   
   private

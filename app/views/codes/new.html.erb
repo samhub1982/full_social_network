@@ -1,0 +1,23 @@
+<center><h1>Enter access code to register</h1>
+<%= form_for(:users, :url => signup_path) do |f| %>
+  <% if @code.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@code.errors.count, "error") %> prohibited this code from being saved:</h2>
+
+      <ul>
+      <% @code.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :code, "Access code" %><br />
+    <%= f.text_field :code %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Authenticate" %>
+  </div>
+<% end %>
+</center>
